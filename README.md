@@ -1,7 +1,3 @@
-# Purescript esbuild template
+# Lunartime
 
-How to use:
-
-1. Press "use template"
-2. Clone the repo
-3. Enjoy!
+Small purescript game I made to try out concur with preact

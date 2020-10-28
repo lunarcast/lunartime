@@ -1,6 +1,14 @@
-{ name = "Purescript project"
+{ name = "Lunartime"
 , dependencies =
-  [ "prelude", "psci-support", "generics-rep", "debugged", "effect", "console" ]
+  [ "concur-core"
+  , "concur-react"
+  , "console"
+  , "debugged"
+  , "effect"
+  , "generics-rep"
+  , "prelude"
+  , "psci-support"
+  ]
 , sources = [ "src/**/*.purs" ]
 , packages = ./packages.dhall
 }

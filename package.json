@@ -1,5 +1,5 @@
 {
-  "name": "purescript-project",
+  "name": "lunartime",
   "version": "0.0.0",
   "scripts": {
     "test": "spago test",
@@ -7,7 +7,7 @@
     "dev": "pnpm run prepare-build && concurrently -k -c cyan nodemon \"nodemon --config nodemon.css.json\" \"pnpm run watch\"",
     "build": "pnpm run prepare-build && pnpm run bundle:purescript && pnpm run dce && pnpm run bundle:js && cross-env NODE_ENV='production' pnpm run build:css",
     "postbuild": "cp dist/index.html dist/404.html",
-    "build:js": "esbuild --outdir=dist public/entry.js --bundle",
+    "build:js": "esbuild --outdir=dist public/entry.js --bundle --loader:.js=jsx",
     "bundle:js": "pnpm run build:js -- --minify --define:production=true",
     "build:css": "postcss public/styles/index.pcss -o dist/index.css",
     "bundle:purescript": "spago build --purs-args '--codegen corefn'",
@@ -27,12 +27,17 @@
     "nodemon": "^2.0.4",
     "postcss": "^8.1.1",
     "postcss-cli": "^8.1.0",
+    "postcss-comment": "^2.0.0",
     "postcss-font-magician": "^2.3.1",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "postcss-simple-vars": "^6.0.1",
     "semantic-release": "^17.1.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "preact": "^10.5.5",
+    "preact-render-to-string": "^5.1.11",
+    "protoo-client": "^4.0.4"
+  },
   "sideEffects": false
 }

@@ -1,13 +1,17 @@
 {
   "cSpell.words": [
     "codegen",
+    "compat",
     "corefn",
     "dhall",
     "esbuild",
+    "lunartime",
     "outdir",
     "pcss",
     "pnpm",
     "postbuild",
+    "preact",
+    "protoo",
     "purescript",
     "purs",
     "spago",
