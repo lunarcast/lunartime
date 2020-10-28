@@ -3,11 +3,10 @@
   [ "concur-core"
   , "concur-react"
   , "console"
-  , "debugged"
   , "effect"
-  , "generics-rep"
   , "prelude"
-  , "psci-support"
+  , "validation"
+  , "string"
   ]
 , sources = [ "src/**/*.purs" ]
 , packages = ./packages.dhall

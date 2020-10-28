@@ -2,6 +2,7 @@ $bg: #241b2f;
 $bg-light: #332b3a;
 $on-bg: #ffffff;
 $secondary: #72f197;
+$error: #e34450;
 $transition-time: 0.7s;
 
 $monospace: "Source Code Pro", "SFMono-Regular", Consolas, "Liberation Mono",
@@ -78,7 +79,7 @@ body {
   line-height: 1.4;
   letter-spacing: 1px;
   margin-top: 1rem;
-  color: rgb(194, 194, 194);
+  color: rgb(173, 173, 173);
 }
 
 #title {
@@ -99,14 +100,35 @@ body {
   color: white;
 }
 
-.play-arrow {
+#play-arrow {
   fill: $on-bg;
   height: 3rem;
   padding-right: 0.7rem;
-  cursor: pointer;
   transition: fill $transition-time;
 }
 
-.play-arrow:hover {
+#play-arrow.failure {
+  fill: rgb(78, 58, 92);
+  cursor: not-allowed;
+}
+
+#play-arrow.success {
+  cursor: pointer;
+}
+
+#play-arrow.success:hover {
   fill: $secondary;
+}
+
+#errors {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error {
+  color: $error;
+  font-size: 1.4rem;
+  font-weight: 200;
 }
