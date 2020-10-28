@@ -6,7 +6,7 @@
   , "effect"
   , "prelude"
   , "validation"
-  , "string"
+  , "strings"
   ]
 , sources = [ "src/**/*.purs" ]
 , packages = ./packages.dhall
